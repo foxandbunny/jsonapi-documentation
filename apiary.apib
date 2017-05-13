@@ -1,0 +1,45 @@
+FORMAT: 1A
+HOST: https://foxandbunny.io
+
+# JSON API
+
+## Data structures
+
+### Fox (object)
+- href
+- metadataHref
+- type
+- mediaType
+
+## Fox [/api/1.0/fox]
+
+### List [GET]
+
++ Request (application/json)
+
+    + Headers 
+        
+            Authorization: Basic YWRtaW5Ac2hvZdM6MTIzNDU2 
+
++ Response 200 (application/json;charset=utf-8)
+    
+    + Attributes
+        + rows (array)
+            + (object)
+                + id (string)
+                + name (string)
+                + color (string)
+
+
+### Create [POST]
++ Request (application/json)
+
+    + Headers 
+        
+            Auth-Token: 6ab89be1ae6ff147755625ee8da948e42612233b
+            
+    + Attributes
+        + name: Mr. Fox (string, required) - Fox name
+        + color: red, white (array[string]) - Colors array
+
++ Response 201 (application/json;charset=utf-8)
